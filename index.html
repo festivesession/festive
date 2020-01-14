@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title> Happy Lohri </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script data-ad-client="ca-pub-6268164296554968" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+	<a id="share" class="fa fa-whatsapp" href="" data-action="share/whatsapp/share"></a>
+	<canvas></canvas>
+	<div class="name" >
+		<h1 id="name" >
+
+		</h1>
+		<p class=" center-align comic wishesed"> 
+			<span class="mdc-text-red">W</span> 
+			<span class="mdc-text-purple">i</span> 
+			<span class="mdc-text-blue">s</span> 
+			<span class="mdc-text-teal">h</span> 
+			<span class="mdc-text-cyan">i</span> 
+			<span class="mdc-text-orange">n</span> 
+			<span class="mdc-text-green">g &nbsp;</span> 
+			<span class="mdc-text-yellow">Y</span> 
+			<span class="mdc-text-teal">o</span> 
+			<span class="mdc-text-red">u</span> 
+		</p>
+	</div>
+		
+	<div class="happy" >
+		<img class="wish" src="assets/wishes.png">
+	</div>
+
+	<div class="dancers" >
+		<img class="dancer first" src="assets/1.png" />
+		<img class="dancer second" src="assets/2.png" />
+		<img class="dancer third" src="assets/3.png" />
+	</div>
+	
+	<div class="bottom" >
+	
+		<!-- AD START -->		
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- main_ad -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-6268164296554968"
+			 data-ad-slot="4161463836"
+			 data-ad-format="auto"
+			 data-full-width-responsive="true"></ins>
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<!-- AD END -->	
+	
+		<div class="extra"> 
+			On this auspicious day of Lohri I wish you to have all peace and prosperity, Let this festival brings endless happiness to you and your family, Wish you Happy Lohri! 
+		</div>
+		<div class="create_new" >
+			<form method="get" >
+				<input name="name" type="text" placeholder="Enter Your Name | First Wishes" />
+				<input value="CREATE" type="submit"  />
+			</form>
+		</div>
+	</div>
+	
+	
+	
+	<script src="falling.js" ></script>
+	
+	<script> 
+		function putName(string) {
+			let name = document.getElementById('name');
+			
+			for(var i = 0; i < string.length; ++i) {
+				var elm = document.createElement('span');
+				elm.innerText = string[i];
+				name.appendChild(elm);
+			}
+		}
+		
+		function init() {
+			let text = "A Very Happy Lohri to You. \n Click Here for Surprise \n " + window.location.href;
+			let url = "https://api.whatsapp.com/send?text=" + text;
+			let sharebtn = document.getElementById('share');
+			sharebtn.setAttribute('href',url);
+
+			if(window.location.search == "") {
+				putName("Your Name");
+			} else {
+				let name = window.location.search.substr(1).split('=')[1];
+				putName(name);
+			}
+		}
+		
+		init();		
+	</script>
+</body>
+</html>
